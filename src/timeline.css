@@ -1,0 +1,166 @@
+
+h2 {
+	padding-right: 11px;
+	padding-left: 11px;
+}
+
+hr {
+	border: 1px solid #E1E3E6;
+	margin: 0px;
+}
+.topNav {
+	height: 24px;
+	background-image: linear-gradient(-149deg, #8156E1 0%, #47C0EC 100%);
+	padding: 22px 18px 21px 18px;
+	display: -webkit-flex;
+  	display: flex;
+    align-items: center;
+    color: white;
+
+
+}
+.topNav span {
+	font-size: 1.5em;
+	-webkit-flex: 1;
+          flex: 1;
+}
+.topNav img {
+	max-width: 100%;
+	width: 24px;
+	height: 24px;
+	-webkit-flex: none;
+    flex: none;
+
+}
+.problem {
+	padding: 14px 14px 0px 14px;
+}
+
+
+.problem span{
+	font-size: 1.1em;
+	color: #18C1FF;
+
+}
+
+
+
+.problemTitle, .problemBg, .problemSol {
+	margin: 10px 7px 10px 7px; 
+}
+
+.fieldTitleBig {
+	color: #18C1FF;
+	font-size: 1em;
+}
+.fieldContentBig {
+	font-size: 1.5em;
+	font-family: AppleSDGothicNeo-SemiBold;
+	color: #313D41;
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.31);
+
+}
+
+.fieldContent{
+	/* 주말에 아무나 와서 차를 대기 때문이: */
+	font-family: AppleSDGothicNeo-Regular;
+	font-size: 1.125em;
+	color: #313D41;
+}
+
+.fieldTitle {
+	color: #18C1FF;
+	font-size: 0.75em;
+}
+
+
+.action {
+	padding: 14px;
+
+}
+.actionTop {
+	padding: 0px 7px 10px 7px;
+}
+
+.actionBoxs {
+	display: -webkit-flex;
+    display: flex;	
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.actionBox {
+	background: #FFFEFE;
+	box-shadow: 0 0 15px 2px rgba(0,0,0,0.15);
+	border-radius: 8px;
+    -webkit-flex: 7;
+    flex: 7;
+}
+/*
+.actionBox:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+*/
+.actionBox span {
+	
+}
+.actionTitle {
+	font-size: 16px;
+	color: #145972;
+	display: -webkit-flex;
+  	display: flex;
+    justify-content: center;
+	margin: 25px 0px 0px 0px;
+}
+.actionDue {
+	font-size: 12px;
+	color: #8AA0AB;
+	text-align: right;
+	margin: 0px 13px 0px 13px;
+}
+.actionIcon {
+	display: -webkit-flex;
+  	display: flex;
+    justify-content: center;
+}
+.actionIcon img {
+	width: 36px;
+	height: 36px;
+	max-width: 100%;
+
+}
+.actionGroup {
+	margin-top: 15px;
+
+	font-size: 14px;
+	color: #313D41;
+}
+.blank {
+	min-width: 14px;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.problemChat {
+	padding: 11px;
+	background-color: #F4F3E8;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+	display: -webkit-flex;
+    display: flex;
+}
+.rightChat {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.enterChat {
+	-webkit-flex: none;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+	background-color: #47C0EC;
+	border-radius: 5px;
+	color: white;
+}
