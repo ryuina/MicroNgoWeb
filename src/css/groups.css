@@ -1,0 +1,44 @@
+
+a {
+	text-decoration: none;
+}
+.NGOs {
+	padding: 20px;
+
+}
+.active .title {
+	font-size: 1.1em;
+}
+
+.buttonMore button {
+	margin: 0px;
+	padding: 0px;
+	border: 1px #dddddd solid;
+	background-color: white;
+	border-radius: 5px;
+	font-size: 1em;
+	padding: 5px;
+	height: 25px;
+}
+
+.NGOBox {
+	border: 1px rgba(94,99,101,0.60) solid;
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+	border-radius: 9px;
+	padding: 11px;
+	margin-top: 12px;
+	
+
+}
+.NGOTitle {
+	font-size: 1.4em;
+	color: #1D2124;
+	display: flex;
+	justify-content: center;
+}
+.NGOPlace {
+	color: #95989A;
+	display: flex;
+	margin-top: -3px;
+	justify-content: center;
+}

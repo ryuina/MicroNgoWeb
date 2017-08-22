@@ -4,13 +4,13 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 class TopNav extends React.Component {
 	render() {
 		return (
-			<div className='topBox'>
-			<Row style={{margin:"0px"}}>
-			<Col xs className='navBox true' >Micro NGO</Col>
-			<Col xs className='navBox'>My</Col>
-			<Col xs className='navBox'>Do</Col>
-			<Col xs className='navBox'>Setting</Col>
-			</Row>
+			<div className='topNav'>
+				<div className='leftBox'>Mi NGO</div>
+				<div className='rightBox'>
+					<div className='doNav'>Do</div>
+					<div className='searchNav'><img src={require("./img/search_white.png")}></img></div>
+					<div className='profileNav'>Sign up</div>
+				</div>
 			</div>
 		);
 

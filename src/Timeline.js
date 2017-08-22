@@ -1,7 +1,7 @@
 import React from 'react';
 import Chat_Bot from './Chat.js';
 
-import './timeline.css';
+import './css/timeline.css';
 
 
 class Timeline extends React.Component {

@@ -1,0 +1,134 @@
+body {
+	margin: 0px;
+	width: 100%;
+	max-width: 768px;
+	font-family: 'Open Sans', sans-serif;
+
+}
+.topNav {
+	height: 24px;
+	background-image: linear-gradient(-149deg, #8156E1 0%, #47C0EC 100%);
+	padding: 22px 18px 20px 18px;
+
+    color: white;
+    font-size: 1.4em;
+
+}
+
+.leftBox {
+	float: left;
+	display: -webkit-flex;
+  	display: flex;
+    align-items: center;
+    font-family: 'Slabo 27px', serif;
+
+}
+
+.rightBox {
+	float: right;
+	display: -webkit-flex;
+  	display: flex;
+    align-items: center;
+}
+
+.searchNav {
+	margin-left: 16px;
+	margin-right: 16px;
+	width: 20px;
+	height: 20px;
+}
+.searchNav img{
+	width: 20px;
+	height: 20px;
+	max-width: 100%;
+
+}
+
+.logo {
+	height: 200px;
+	background-color: #aaaaaa;
+}
+
+.searchBox {
+	margin-top: 55px;
+}
+
+.searchBot {
+display: -webkit-flex;
+  	display: flex;
+    justify-content: center;
+}
+.searchBot img {
+	width: 64px;
+	height: 64px;
+	max-width: 100%;
+}
+.searchString {
+	margin-top: 14px;
+	margin-left: 11px;
+font-family: 'Open Sans', sans-serif;
+
+}
+.stringMain {
+	font-size: 1.6em;
+	font-weight: 600;
+	color: #006EB7;
+}
+.stringSub {
+	margin-top: 9px;
+	font-size: 1.4em;
+	font-weight: 600;
+	color: #95989A;
+}
+.searchInput {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.searchInput div {
+	border: 1px rgba(94,99,101,0.60) solid;
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+	border-radius: 9px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-left: 14px;
+	padding-right: 14px;
+	
+}
+.searchInput input {
+	font-size: 1em;
+	height: 57px;
+	width: 100%;
+	border: 0px;
+	padding: 0px;
+}
+.searchInput input::placeholder {
+	color: hsla(204, 3%, 60%, 0.5);
+}
+.inputKeyword {
+	margin-top: 32px;
+}
+
+.submitSearch {
+	background-color: rgba(117, 122, 229, 0.29);
+	border: 1px rgba(94,99,101,0.60) solid;
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+	border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  	height: 43px;
+  	margin-right: 32px;
+  	margin-left: 32px;
+}
+
+.submitSearch button {
+	font-size: 1.2em;
+	color: white;
+}
+
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import './css/groups.css';
 
 
-class GroupInfo extends React.Component {
+class NGOInfo extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -14,20 +15,18 @@ class GroupInfo extends React.Component {
 	}
 
 	render() {
-		var link = "/group/"+this.props.info.id;
+		var link = "/groups/"+this.props.ngo.id;
 		return (
-			<div className='groupBox'>
+			
 			<Link to={link}>
-			<div>
-				<span className='groupTitle'>
-					<span className='groupTopic'>{this.props.info.groupTopic}</span>
-					<span className='groupSubject'> - {this.props.info.groupSubject}</span>
-				</span>
-				<span className='groupNum'>{this.props.info.peopleNum}</span>
+			<div className='NGOBox'>
+			<div className='NGOTitle'>
+				{this.props.ngo.name}
 			</div>
-			<span className='groupScope'>{this.props.info.groupScope}</span>
+			<div className='NGOPlace'>KAIST</div>
+			</div>
 			</Link>
-			</div>
+			
 
 			);
 		
@@ -35,44 +34,18 @@ class GroupInfo extends React.Component {
 
 }
 
-
-class Groups extends React.Component {
-	render() {
-		const list = [{
-				id: 1,
-				groupTopic: '~~가문제입니다',
-				groupSubject: 'Subject',
-				groupScope: 'Daejeon',
-				peopleNum: 10,
-			},
-			{
-				id: 2,
-				groupTopic: 'Topic',
-				groupSubject: 'Subject',
-				groupScope: 'Daejeon',
-				peopleNum: 20,
-			},
-			{
-				id: 3,
-				groupTopic: 'Topic',
-				groupSubject: 'Subject',
-				groupScope: 'Daejeon',
-				peopleNum: 30,
-			}];
-			const groupItems = list.map((info) => 
-				<GroupInfo info={info}/>
-				);
+const Groups = ({ngos}) => {
+	ngos.map((info) => console.log(info));
+		const ngoList = ngos.map((ngo) => 
+			<NGOInfo ngo={ngo}/>
+			);
 		return(
-			<div className="active" > 
-				<span className='title'>Top active groups</span>
-				{groupItems}
-				<div className="buttonMore">
-					<button >more</button>
-				</div>
+			<div className="NGOs" > 
+				{ngoList}
 
 			</div>
 		);
-	}
 }
+
 
 export default Groups;

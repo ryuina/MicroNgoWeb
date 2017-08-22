@@ -8,17 +8,7 @@ hr {
 	border: 1px solid #E1E3E6;
 	margin: 0px;
 }
-.topNav {
-	height: 24px;
-	background-image: linear-gradient(-149deg, #8156E1 0%, #47C0EC 100%);
-	padding: 22px 18px 21px 18px;
-	display: -webkit-flex;
-  	display: flex;
-    align-items: center;
-    color: white;
 
-
-}
 .topNav span {
 	font-size: 1.5em;
 	-webkit-flex: 1;

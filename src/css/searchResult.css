@@ -1,0 +1,76 @@
+.searchInputs {
+	display: -webkit-flex;
+  	display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.searchInputs img{
+	width: 46px;
+	height: 46px;
+	max-width: 100%;
+}
+
+.stringInputs div{
+	border: 1px rgba(94,99,101,0.60) solid;
+		box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+
+	border-radius: 9px;
+	padding-left: 11px;
+	padding-right: 11px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 9px;
+}
+.resultString {
+	margin-left: 14px;
+	font-size: 1.2em;
+		color: #006EB7;
+	font-weight: 600;
+}
+.stringIntro {
+	color: #37393B;
+	font-weight: 400;
+}
+
+
+
+.makeNew {
+	position: fixed;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	bottom: 0;
+	right:0;
+	display: flex;
+	    align-items: center;
+
+}
+.makeNewString {
+	border: 1px solid #18C1FF;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 10px;
+	padding-bottom: 9px;
+	color: #95989A;
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+	height: 1.2em;
+	font-size: 1.2em;
+	display: flex;
+    align-items: center;
+
+}
+.makeNewButton {
+	border: 1px solid #18C1FF;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.16);
+
+	border-radius: 50%;
+	width: 58px;
+	height: 58px;
+	margin-left: 14px;
+}
+.makeNewButton img {
+	padding: 11px;
+	width: 36px;
+	height: 36px;
+	max-width: 100%;
+}
