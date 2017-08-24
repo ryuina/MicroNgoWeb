@@ -11,19 +11,20 @@ class MicroNgoRoot extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-	
-		}
+			name:'',
+		};
 	}
 
 	onHandleChange() {
-
+		this.setState({name:'string'});
+		console.log('d');
 	}
 	render() {
 		return (
 			<BrowserRouter>
 				<div>
-				
-				<Route exact path="/" component={Home}/>
+				<h1>{this.state.name}</h1>
+				<Route exact path="/" component={ () => (<Home onHandleChange={() =>this.onHandleChange()} />)}/>
 				<Route path="/my" component={Home}/>
 				<Route path="/search" component={Home}/>
 				<Route exact path="/groups/:id" component={Timeline}/>

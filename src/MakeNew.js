@@ -5,6 +5,7 @@ import { browserHistory } from 'react-router'
 
 class MakeNew extends React.Component {
 	render() {
+		console.log(this.props);
 		return (
 			<div>
 				<div className='topNav'>

@@ -11,23 +11,31 @@ class SearchResult extends React.Component {
         super();
         this.state = {
         	ngos : [],
-        	fetching: false,
+        	willMount: true,
         }
 
     }
 	fetchNGOInfo = async () => {
-		this.setState({
-            fetching: true // requesting..
-        });
+		
         const ngos = await axios.get('http://45.32.37.119:8000/ngo'); //example
         this.setState({ ngos : ngos.data, fetching: false });
     }
+    /*
+    componentWillMount() {
+    	console.log(this.state);
+    	if (this.state.willMount) {
+    		this.setState({willMount: false, keyword : this.props.location.query.keyword, place: this.props.location.query.place})
+
+    	}
+    }
+*/
 
 	componentDidMount() {
         this.fetchNGOInfo();
     }
 
 	render() {
+		console.log(this.props);
 		return (
 			<div className='searchResult'>
 				<div className='searchInputs'>
@@ -35,8 +43,8 @@ class SearchResult extends React.Component {
 					<div className='resultString'>
 						<div className='stringIntro'>Here are NGOs talking about</div>
 						<div className='stringInputs'>
-							<div className='keyword'>keyword: {this.props.location.query.keyword}</div>
-							<div className='place'>place: {this.props.location.query.place}</div>
+							<div className='keyword'>keyword: {this.props.keyword}</div>
+							<div className='place'>place: {this.props.place}</div>
 						</div>
 					</div>
 				</div>
@@ -45,7 +53,7 @@ class SearchResult extends React.Component {
 					<div className='makeNewString'>
 						Wanna make new?
 					</div>
-					<Link to={{ pathname: '/new', query: { place: this.props.location.query.place } }}>
+					<Link to={{ pathname: '/new', query: { place: this.props.place } }}>
 					<div className='makeNewButton'>
 						<img src={require("./img/add.png")}></img>
 
