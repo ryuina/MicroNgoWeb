@@ -23,7 +23,6 @@ class Home extends React.Component {
 		this.onChange = this.onChange.bind(this);
 		this.onHandleChange = this.onHandleChange.bind(this);
 
-		this.search='b';
 	}
 
 	onChange(keyword, place) {
@@ -47,10 +46,19 @@ class Home extends React.Component {
 	
 	render() {
 		return(
-
 			<div>
 				<TopNav />
-				<button onClick={() => this.onHandleChange()}/>
+				<Switch>
+					<Route exact path='/' component={Search}/>
+					<Route path="/my" component={MicroNgoMy}/>
+					<Route path='/search' component={() => (<SearchResult keyword={this.state.keyword} place={this.state.place}/>)}/>
+				</Switch>
+			</div>
+		);
+	}
+/*
+			<div>
+				<TopNav />
 				<Switch>
 					<Route exact path="/" component={() => 
 						(this.state.fetching ? 
@@ -65,7 +73,7 @@ class Home extends React.Component {
 
 			);
 	}
-	/*
+	
 	render() {
 		return (
 			<div>

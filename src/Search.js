@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setInputs } from './actions';
 
 class Search extends React.Component {
 
@@ -55,12 +57,22 @@ class Search extends React.Component {
 				<div className='submitSearch' onClick={() =>this.onSubmit()}>
 					NGO Search
 				</div>
+
+
+				
 				</Link>
 				
 			</div>
 			);
 	}
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        onSubmit: (keyword, place) => dispatch(setInputs(keyword, place))
+    };
+}
 				//<Link to={{ pathname: {searchLink}, query: { keyword: this.state.keyword, place: this.state.place } }}>
+Search = connect(undefined, mapDispatchToProps)(Search);
 
 export default Search;

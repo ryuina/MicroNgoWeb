@@ -1,14 +1,14 @@
 
 import React from 'react';
 import Search from './Search.js';
-import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+
 
 class MakeNew extends React.Component {
 
-	componentWillUnmount() {
-		this.props.isMainTrue();
-	}
 	render() {
+		console.log('new');
 		return (
 			<div>
 				<div className='topNav'>
@@ -46,5 +46,14 @@ class MakeNew extends React.Component {
 		);
 	}
 }
+
+let mapStateToProps = (state) => {
+    return {
+        keyword: state.inputs.keyword,
+        place: state.inputs.place
+    };
+}
+
+MakeNew = connect(mapStateToProps)(MakeNew);
 
 export default MakeNew;

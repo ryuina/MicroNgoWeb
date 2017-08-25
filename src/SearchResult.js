@@ -1,6 +1,7 @@
 import React from 'react';
 import Groups from './Group.js';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import axios from 'axios';
 
 import './css/searchResult.css';
@@ -17,7 +18,7 @@ class SearchResult extends React.Component {
     }
     onClick() {
     	console.log('click');
-    	this.props.isMainFalse();
+    	//this.props.isMainFalse();
 
     }
 	fetchNGOInfo = async () => {
@@ -70,5 +71,14 @@ class SearchResult extends React.Component {
 	}
 
 }
+
+let mapStateToProps = (state) => {
+    return {
+        keyword: state.inputs.keyword,
+        place: state.inputs.place
+    };
+}
+
+SearchResult = connect(mapStateToProps)(SearchResult);
 
 export default SearchResult;
