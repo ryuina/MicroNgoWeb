@@ -4,8 +4,11 @@ import Search from './Search.js';
 import { browserHistory } from 'react-router'
 
 class MakeNew extends React.Component {
+
+	componentWillUnmount() {
+		this.props.isMainTrue();
+	}
 	render() {
-		console.log(this.props);
 		return (
 			<div>
 				<div className='topNav'>
@@ -28,7 +31,7 @@ class MakeNew extends React.Component {
 
 				<div className='searchInput'>
 				<div className='inputPlace' >
-					<input type='text' placeholder='SELECT PLACE' ref="place" value={this.props.location.query.place} /*onChange={this.handleChange}*/ />
+					<input type='text' placeholder='SELECT PLACE' ref="place" value={this.props.place} /*onChange={this.handleChange}*/ />
 				</div>
 				<div  className='inputKeyword'>
 					<input type='text' placeholder='ENTER PROBLEM TITLE' ref="keyword" /*onChange={this.handleChange}*/ />

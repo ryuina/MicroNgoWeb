@@ -15,6 +15,11 @@ class SearchResult extends React.Component {
         }
 
     }
+    onClick() {
+    	console.log('click');
+    	this.props.isMainFalse();
+
+    }
 	fetchNGOInfo = async () => {
 		
         const ngos = await axios.get('http://45.32.37.119:8000/ngo'); //example
@@ -53,8 +58,8 @@ class SearchResult extends React.Component {
 					<div className='makeNewString'>
 						Wanna make new?
 					</div>
-					<Link to={{ pathname: '/new', query: { place: this.props.place } }}>
-					<div className='makeNewButton'>
+					<Link to='/new' >
+					<div className='makeNewButton' onClick={()=> this.onClick()}>
 						<img src={require("./img/add.png")}></img>
 
 					</div>

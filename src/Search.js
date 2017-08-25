@@ -51,11 +51,11 @@ class Search extends React.Component {
 					<input type='text' placeholder='INSERT KEYWORD' ref="keyword" onChange={this.onKeywordInput}/>
 				</div>
 				</div>
-				
+				<Link to='/search'>
 				<div className='submitSearch' onClick={() =>this.onSubmit()}>
 					NGO Search
 				</div>
-				
+				</Link>
 				
 			</div>
 			);
