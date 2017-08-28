@@ -3,7 +3,7 @@ import Groups from './Group.js';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
-
+import { Button, Label } from 'semantic-ui-react';
 import './css/searchResult.css';
 import './css/chat.css';
 class SearchResult extends React.Component {
@@ -56,14 +56,11 @@ class SearchResult extends React.Component {
 				</div>
 				<Groups ngos = {this.state.ngos}/>
 				<div className='makeNew'>
-					<div className='makeNewString'>
-						Wanna make new?
-					</div>
-					<Link to='/new' >
-					<div className='makeNewButton' onClick={()=> this.onClick()}>
-						<img src={require("./img/add.png")}></img>
+					<Label pointing='right' size='big' as='a' basic color='blue'>새 그룹 만들기</Label>
 
-					</div>
+					<Link to='/new' >
+  						<Button circular icon='plus' basic color='blue' size='big' onClick={()=> this.onClick()}/>
+
 					</Link>
 				</div>
 			</div>

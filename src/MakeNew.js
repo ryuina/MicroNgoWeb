@@ -3,10 +3,15 @@ import React from 'react';
 import Search from './Search.js';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
+import { Button,Icon,Checkbox, Form } from 'semantic-ui-react';
+
 
 
 class MakeNew extends React.Component {
 
+	onClose() {
+		this.props.history.goBack();
+	}
 	render() {
 		console.log('new');
 		return (
@@ -14,7 +19,7 @@ class MakeNew extends React.Component {
 				<div className='topNav'>
 					<div className='leftBox'>New NGO</div>
 					<div className='rightBox'>
-						<div className='closeButton'><img src={require("./img/close_white.png")}></img></div>
+						<Icon name='close' size='large' onClick={()=>this.onClose()} />
 					</div>
 				</div>
 
@@ -29,17 +34,20 @@ class MakeNew extends React.Component {
 					</div>
 				</div>
 
-				<div className='searchInput'>
-				<div className='inputPlace' >
-					<input type='text' placeholder='SELECT PLACE' ref="place" value={this.props.place} /*onChange={this.handleChange}*/ />
-				</div>
-				<div  className='inputKeyword'>
-					<input type='text' placeholder='ENTER PROBLEM TITLE' ref="keyword" /*onChange={this.handleChange}*/ />
-				</div>
-				</div>
-				<div className='submitSearch'>
-					<button >Complete</button>
-				</div>
+
+				<Form>
+				    <Form.Field>
+				      <label>장소</label>
+				      <input placeholder='장소를 선택하세요.'  defaultValue={this.props.place}/>
+				    </Form.Field>
+				    <Form.Field>
+				      <label>NGO 제목</label>
+				      <input placeholder='문제를 입력하세요.' />
+				    </Form.Field>
+
+				    <Button type='submit'>NGO 만들기</Button>
+				  </Form>
+				
 				
 			</div>
 			</div>

@@ -12,10 +12,11 @@ import MakeNew from './MakeNew.js';
 import Search from './Search.js';
 import TopNav from './TopNav.js';
 import SearchResult from './SearchResult.js';
+import NGO from './NGO.js';
 
-
-
+import 'semantic-ui-css/semantic.min.css';
 import './css/index.css';
+
 
 
 const store = createStore(microNGOApp);
@@ -63,7 +64,7 @@ class MicroNgoRoot extends React.Component {
 				
 				<Switch>
 					<Route exact path='/new' component={MakeNew}/>
-					<Route exact path="/groups/:id" component={Timeline}/>
+					<Route exact path="/groups/:id" component={NGO}/>
 
 					<Route path='/' component={Home}/>
 				

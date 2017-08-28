@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setInputs } from './actions';
+import { Button,Icon,Checkbox, Form } from 'semantic-ui-react';
 
 class Search extends React.Component {
 
@@ -44,6 +45,28 @@ class Search extends React.Component {
 						<div className='stringSub'>Find a NGO<br/>and Solve it together!</div>
 					</div>
 				</div>
+				<Form>
+				    <Form.Field>
+				      <label>장소</label>
+				      <input placeholder='장소를 선택하세요.' ref="place" onChange={this.onPlaceInput}/>
+				    </Form.Field>
+				    <Form.Field>
+				      <label>문제 키워드</label>
+				      <input placeholder='문제의 키워드를 입력하세요.' ref="keyword" onChange={this.onKeywordInput}/>
+				    </Form.Field>
+				    <Link to='/search'>
+				    <Button type='submit' onClick={() =>this.onSubmit()}>NGO 찾기</Button>
+				  	</Link>
+				  </Form>
+				
+				
+			</div>
+			);
+	}
+}
+
+
+/*
 
 				<div className='searchInput'>
 				<div className='inputPlace' >
@@ -57,15 +80,8 @@ class Search extends React.Component {
 				<div className='submitSearch' onClick={() =>this.onSubmit()}>
 					NGO Search
 				</div>
-
-
-				
 				</Link>
-				
-			</div>
-			);
-	}
-}
+				*/
 
 let mapDispatchToProps = (dispatch) => {
     return {
