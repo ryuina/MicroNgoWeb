@@ -3,10 +3,9 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import MicroNgoMy from './My.js';
-import Chat_Bot from './Chat.js';
 import SearchResult from './SearchResult.js';
 import TopNav from './TopNav.js';
-
+import Login from './Login.js';
 import Search from './Search.js';
 
 
@@ -51,6 +50,7 @@ class Home extends React.Component {
 				<Switch>
 					<Route exact path='/' component={Search}/>
 					<Route path="/my" component={MicroNgoMy}/>
+					<Route path='/login' component={Login}/>
 					<Route path='/search' component={() => (<SearchResult keyword={this.state.keyword} place={this.state.place}/>)}/>
 				</Switch>
 			</div>

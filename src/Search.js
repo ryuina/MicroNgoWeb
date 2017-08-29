@@ -37,7 +37,7 @@ class Search extends React.Component {
 
 		return (
 
-			<div className='searchBox'>
+			<div className='contentBox'>
 				<div className='searchBot'>
 					<img src={require("./img/guide.png")}></img>
 					<div className='searchString'>

@@ -1,7 +1,6 @@
 body {
 	margin: 0px;
 	width: 100%;
-	max-width: 768px;
 	font-family: 'Open Sans', sans-serif;
 
 }
@@ -31,7 +30,9 @@ body {
 
 .rightBox {
 	float: right;
-	
+	display: -webkit-flex;
+  	display: flex;
+    align-items: center;
 }
 
 .searchNav {
@@ -52,7 +53,7 @@ body {
 	background-color: #aaaaaa;
 }
 
-.searchBox {
+.contentBox {
 	margin-top: 55px;
 	margin-right: 33px;
 	margin-left: 33px;
