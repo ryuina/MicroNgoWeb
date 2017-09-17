@@ -27,7 +27,7 @@ class MakeNew extends React.Component {
 
 				<div className='searchBox'>
 				<div className='searchBot'>
-					<img src={require("./img/guide.png")}></img>
+					<img src={require("../img/guide.png")}></img>
 					<div className='searchString'>
 						<div className='stringMain'>Make a new NGO!</div>
 						<div className='stringSub'>Select place<br/>and organize the problem</div>

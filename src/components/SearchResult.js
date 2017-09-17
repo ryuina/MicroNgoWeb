@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { Button, Label } from 'semantic-ui-react';
-import './css/searchResult.css';
-import './css/chat.css';
+import '../css/searchResult.css';
 class SearchResult extends React.Component {
 
 	constructor(props) {
@@ -45,7 +44,7 @@ class SearchResult extends React.Component {
 		return (
 			<div className='searchResult'>
 				<div className='searchInputs'>
-					<img src={require("./img/guide.png")}></img>
+					<img src={require("../img/guide.png")}></img>
 					<div className='resultString'>
 						<div className='stringIntro'>Here are NGOs talking about</div>
 						<div className='stringInputs'>

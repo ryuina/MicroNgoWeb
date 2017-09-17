@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setInputs } from './actions';
+import { setInputs } from '../actions';
 import { Button,Icon,Checkbox, Form } from 'semantic-ui-react';
 
 class Search extends React.Component {
@@ -39,7 +39,7 @@ class Search extends React.Component {
 
 			<div className='contentBox'>
 				<div className='searchBot'>
-					<img src={require("./img/guide.png")}></img>
+					<img src={require("../img/guide.png")}></img>
 					<div className='searchString'>
 						<div className='stringMain'>What's your problem?</div>
 						<div className='stringSub'>Find a NGO<br/>and Solve it together!</div>

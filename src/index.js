@@ -6,9 +6,9 @@ import { Provider  } from 'react-redux';
 
 import microNGOApp from './reducers';
 
-import Home from './Home.js';
-import MakeNew from './MakeNew.js';
-import NGO from './NGO.js';
+import Home from './components/Home.js';
+import MakeNew from './components/MakeNew.js';
+import NGO from './components/NGO.js';
 
 import 'semantic-ui-css/semantic.min.css';
 import './css/index.css';

@@ -11,7 +11,7 @@ class TopNav extends React.Component {
 				<div className='leftBox'>Mi NGO</div>
 				<div className='rightBox'>
 					<div className='doNav'>Do</div>
-					<div className='searchNav'><img src={require("./img/search_white.png")}></img></div>
+					<div className='searchNav'><img src={require("../img/search_white.png")}></img></div>
 					<Link to='/login'>
 					<div className='profileNav white'>{this.props.loggedIn ? this.props.name :'Sign in'}</div>
 					</Link>

@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
-import { setLogin } from './actions';
+import { setLogin } from '../actions';
 import { connect } from 'react-redux';
 
 
